@@ -1,0 +1,59 @@
+/* ============================================
+   DESIGN TOKENS
+   ============================================
+   Palette:
+   --cream        #F7F2E9  base background, warm ivory
+   --cream-deep   #EFE7D8  secondary surface
+   --white        #FFFEFB  cards / lightest surface
+   --ink          #2A2520  primary text, warm near-black
+   --ink-soft     #6B6256  secondary text
+   --gold         #B8924F  primary accent
+   --gold-light   #D9BD86  highlight / hover
+   --gold-deep    #8C6B33  shadows on gold, deep accent
+   --night        #15130F  envelope-gate background
+   ============================================ */
+
+:root {
+  /* Color */
+  --cream: #F7F2E9;
+  --cream-deep: #EFE6D2;
+  --white: #FFFEFB;
+  --ink: #2A2520;
+  --ink-soft: #6B6256;
+  --gold: #B8924F;
+  --gold-light: #D9BD86;
+  --gold-deep: #8C6B33;
+  --night: #15130F;
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-accent: 'Marcellus', serif;
+  --font-body: 'Jost', sans-serif;
+
+  /* Spacing scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 7rem;
+  --space-2xl: 11rem;
+
+  /* Motion */
+  --ease-silk: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 0.4s;
+  --dur-mid: 0.9s;
+  --dur-slow: 1.6s;
+
+  /* Layout */
+  --max-width: 1180px;
+  --radius-sm: 4px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+}

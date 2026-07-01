@@ -1,0 +1,151 @@
+/* ============================================
+   RESPONSIVE — mobile-first adjustments
+   ============================================ */
+
+/* ---- tablet ---- */
+@media (max-width: 900px) {
+  .moments__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+  }
+}
+
+/* ---- mobile ---- */
+@media (max-width: 640px) {
+  :root {
+    --space-2xl: 5rem;
+    --space-xl: 3.5rem;
+    --space-lg: 2.5rem;
+  }
+
+  section {
+    padding: var(--space-xl) var(--space-sm);
+  }
+
+  .hero {
+    height: 65vh;
+    min-height: 380px;
+  }
+
+  .hero__content {
+    padding: 0 1rem var(--space-xl);
+  }
+
+  .hero__eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+  }
+
+  .hero__names {
+    font-size: clamp(2.2rem, 12vw, 3.2rem);
+    gap: 0 0.3em;
+  }
+
+  /* envelope */
+  .envelope {
+    width: 82vw;
+    max-width: 320px;
+  }
+
+  .gate__hint {
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    bottom: 10%;
+  }
+
+  /* invite */
+  .invite__type {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .invite__owners span {
+    font-size: clamp(1.6rem, 8vw, 2.4rem);
+  }
+
+  /* calendar */
+  .calendar {
+    padding: 1.2rem;
+  }
+
+  .calendar__day {
+    font-size: 0.78rem;
+  }
+
+  /* countdown */
+  .countdown__grid {
+    gap: 0.5rem;
+  }
+
+  .flip-card__digits {
+    font-size: 1.4rem;
+  }
+
+  .flip-card__label {
+    font-size: 0.6rem;
+  }
+
+  /* venue */
+  .venue__card {
+    padding: 1.5rem 1rem;
+  }
+
+  .venue__map {
+    border-radius: 8px;
+  }
+
+  /* rsvp */
+  .rsvp__title {
+    font-size: clamp(1.6rem, 9vw, 2.4rem);
+  }
+
+  .rsvp__submit {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* footer */
+  .footer {
+    padding: 3rem 1rem 2rem;
+  }
+
+  /* sound toggle */
+  .sound-toggle {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ---- very small screens ---- */
+@media (max-width: 360px) {
+  .hero__names {
+    flex-direction: column;
+    gap: 0.1em;
+    font-size: 2rem;
+  }
+
+  .hero__amp {
+    font-size: 1rem;
+  }
+
+  .envelope {
+    width: 88vw;
+  }
+
+  .countdown__grid {
+    gap: 0.3rem;
+  }
+
+  .flip-card__digits {
+    font-size: 1.2rem;
+  }
+}
+
+@media (hover: none) {
+  .envelope {
+    animation: envelopeFloat 5s ease-in-out infinite;
+  }
+}
