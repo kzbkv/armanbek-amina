@@ -33,11 +33,12 @@
 
 .section-eyebrow {
   display: inline-block;
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  letter-spacing: 0.28em;
+  font-family: var(--font-section);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  letter-spacing: 0.35em;
   text-transform: uppercase;
   color: var(--gold-deep);
+  font-weight: 500;
   margin-bottom: var(--space-sm);
 }
 
@@ -118,13 +119,13 @@
 
 .hero__eyebrow {
   font-family: var(--font-body);
-  font-size: clamp(1.1rem, 3vw, 1.6rem);
-  letter-spacing: 0.28em;
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  letter-spacing: 0.22em;
   color: #ffffff;
   margin-bottom: var(--space-md);
   opacity: 1;
   font-weight: 600;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.6);
+  text-shadow: 0 2px 20px rgba(0,0,0,0.7);
 }
 
 .hero__names {
@@ -164,7 +165,7 @@
 .hero__meta {
   margin-top: var(--space-md);
   font-family: var(--font-body);
-  font-size: clamp(0.85rem, 2vw, 1.05rem);
+  font-size: clamp(0.85rem, 2vw, 1.5rem);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--cream);
@@ -290,13 +291,16 @@ section {
 }
 
 .invite__type {
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.6vw, 1.7rem);
-  line-height: 1.85;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(1.3rem, 2.8vw, 1.7rem);
+  line-height: 2;
   color: var(--ink);
-  min-height: 9em;
-  text-align: left;
+  min-height: 6em;
+  text-align: center;
   margin: var(--space-lg) auto;
+  font-weight: 400;
+  max-width: 680px;
 }
 
 .invite__type .line {
@@ -345,17 +349,19 @@ section {
 
 .invite__owners {
   margin-top: var(--space-lg);
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  letter-spacing: 0.22em;
+  font-family: var(--font-section);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--ink-soft);
+  color: var(--gold-deep);
+  font-weight: 500;
   line-height: 1.9;
+  text-align: center;
 }
 
 .invite__owners span {
   display: block;
-  font-family: var(--font-display);
+  font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: clamp(2rem, 6vw, 3.2rem);
   letter-spacing: 0.04em;
@@ -572,12 +578,7 @@ section {
   background: linear-gradient(180deg, var(--cream) 0%, var(--cream-deep) 100%);
 }
 
-.venue .section-eyebrow {
-  font-size: 1.4rem;
-  letter-spacing: 0.18em;
-  color: var(--gold-deep);
-  margin-bottom: var(--space-lg);
-}
+
 
 .venue__title {
   display: none;

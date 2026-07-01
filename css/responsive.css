@@ -55,8 +55,8 @@
 
   /* invite */
   .invite__type {
-    font-size: 1rem;
-    text-align: left;
+  text-align: center;
+  font-size: clamp(1.2rem, 4.5vw, 1.6rem);
   }
 
   .invite__owners span {

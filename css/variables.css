@@ -26,10 +26,10 @@
   --night: #15130F;
 
   /* Typography */
-  --font-display: 'Cormorant Garamond', serif;
-  --font-accent: 'Marcellus', serif;
-  --font-body: 'Jost', sans-serif;
-
+ --font-display: 'Playfair Display', serif;
+--font-accent: 'Playfair Display', serif;
+--font-body: 'Jost', sans-serif; 
+--font-section: 'Raleway', sans-serif;
   /* Spacing scale */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
