@@ -1,0 +1,15 @@
+/* ============================================
+   SHARED ANIMATION KEYFRAMES
+   ============================================ */
+
+@keyframes driftParticle {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-40px) translateX(10px); }
+}
+
+.is-revealed .moments__item { will-change: transform; }
+
+/* parallax helper class applied via JS transform */
+[data-parallax] {
+  will-change: transform;
+}

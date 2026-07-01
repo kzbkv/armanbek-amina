@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Арманбек &amp; Әмина — Үйлену тойы</title>
+<meta name="description" content="Арманбек мен Әминаның үйлену тойына шақыру — 13 қыркүйек 2026">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/envelope.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<!-- PARTICLES -->
+<canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+<!-- GATE / ENVELOPE -->
+<section id="gate" class="gate" aria-label="Шақыруды ашу">
+  <div class="gate__bg"></div>
+
+  <div class="gate__hint" id="gateHint">Ашу үшін конвертке басыңыз</div>
+
+  <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Конвертті ашу">
+    <div class="envelope__shadow"></div>
+
+    <div class="envelope__card" id="envelopeCard">
+      <p class="envelope__card-eyebrow">Сізді шақырамыз</p>
+      <p class="envelope__card-names">Арманбек <span>&amp;</span> Әмина</p>
+      <p class="envelope__card-date">13.09.2026</p>
+    </div>
+
+    <div class="envelope__back"></div>
+    <div class="envelope__flap-left"></div>
+    <div class="envelope__flap-right"></div>
+    <div class="envelope__flap-bottom"></div>
+    <div class="envelope__flap-top" id="envelopeFlapTop">
+      <span class="envelope__seal">
+        <svg viewBox="0 0 60 60" width="34" height="34">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1.2"/>
+          <text x="30" y="38" text-anchor="middle" font-family="Marcellus, serif" font-size="22" fill="currentColor">А</text>
+        </svg>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN SITE -->
+<main id="site" class="site" aria-hidden="true">
+
+  <div class="gold-progress" id="goldProgress" aria-hidden="true"></div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__media">
+      <img
+        src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1800&auto=format&fit=crop"
+        alt=""
+        class="hero__img"
+        id="heroImg"
+      >
+      <div class="hero__overlay"></div>
+      <div class="hero__fade-bottom"></div>
+    </div>
+
+    <div class="hero__particles" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">ҮЙЛЕНУ ТОЙЫНА ШАҚЫРУ</p>
+      <h1 class="hero__names">
+        <span class="hero__name">Арманбек</span>
+        <span class="hero__amp">&amp;</span>
+        <span class="hero__name">Әмина</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- 1. INVITATION TEXT -->
+  <section class="invite" id="invite">
+    <div class="invite__inner">
+      <span class="section-eyebrow reveal-up">Шақыру хаты</span>
+      <div class="invite__type" id="inviteType" aria-live="polite"></div>
+      <div class="invite__rule"></div>
+      <p class="invite__owners reveal-up">
+        Той иелері:<br>
+        <span>ЖАНДАРБЕК &amp; МУНИРА</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- 2. WEDDING DATE CALENDAR -->
+  <section class="moments" id="moments">
+    <div class="moments__inner">
+      <span class="section-eyebrow reveal-up">Той күні</span>
+      <h2 class="moments__title reveal-up">13 қыркүйек, жексенбі</h2>
+    </div>
+
+    <div class="calendar reveal-zoom">
+      <div class="calendar__header">Қыркүйек 2026</div>
+      <div class="calendar__weekdays">
+        <span>Дс</span><span>Сс</span><span>Ср</span><span>Бс</span><span>Жм</span><span>Сб</span><span>Жс</span>
+      </div>
+      <div class="calendar__days" id="calendarDays"></div>
+      <div class="calendar__time">
+        <span class="calendar__time-label">Басталу уақыты</span>
+        <span class="calendar__time-value">17:00</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. VENUE -->
+  <section class="venue" id="venue">
+    <div class="venue__inner">
+      <span class="section-eyebrow reveal-up">Той орны</span>
+      <h2 class="venue__title reveal-up">Сізді тосамыз</h2>
+
+      <div class="venue__card reveal-up">
+        <div class="venue__card-glow"></div>
+        <h3 class="venue__name">Ресторан «Сұлтан сарайы»</h3>
+        <p class="venue__address">
+          Алматы қаласы<br>
+          Сейітова көшесі, 12
+        </p>
+        <div class="venue__time-row">
+          <span>13 қыркүйек 2026</span>
+          <span class="venue__dot">•</span>
+          <span>17:00</span>
+        </div>
+
+        <div class="venue__map">
+          <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+          <script charset="utf-8">
+            new DGWidgetLoader({
+              "width": "100%",
+              "height": 340,
+              "borderColor": "#D9BD86",
+              "pos": {"lat": 43.20578579925745, "lon": 76.81743621826173, "zoom": 16},
+              "opt": {"city": "almaty"},
+              "org": [{"id": "70000001023455019"}]
+            });
+          </script>
+        </div>
+
+        <a class="venue__btn" href="http://2gis.kz/almaty/firm/70000001023455019/center/76.81743621826173,43.20578579925745/zoom/16" target="_blank" rel="noopener">
+          <span>Ашу 2GIS</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. COUNTDOWN -->
+  <section class="countdown" id="countdown">
+    <div class="countdown__inner">
+      <span class="section-eyebrow reveal-up">Тойға дейін</span>
+      <h2 class="countdown__title reveal-up">Әр сәт жақындатады</h2>
+
+      <div class="countdown__grid" id="countdownGrid">
+        <div class="flip-card" data-unit="days">
+          <div class="flip-card__digits" id="days"></div>
+          <span class="flip-card__label">күн</span>
+        </div>
+        <div class="flip-card" data-unit="hours">
+          <div class="flip-card__digits" id="hours"></div>
+          <span class="flip-card__label">сағат</span>
+        </div>
+        <div class="flip-card" data-unit="minutes">
+          <div class="flip-card__digits" id="minutes"></div>
+          <span class="flip-card__label">минут</span>
+        </div>
+        <div class="flip-card" data-unit="seconds">
+          <div class="flip-card__digits" id="seconds"></div>
+          <span class="flip-card__label">секунд</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. САУАЛНАМА (RSVP) -->
+  <section class="rsvp" id="rsvp">
+    <div class="rsvp__inner">
+      <span class="section-eyebrow reveal-up">Қатысуыңызды растаңыз</span>
+      <h2 class="rsvp__title reveal-up">САУАЛНАМА</h2>
+      <p class="rsvp__subtitle reveal-up">Біз сізді тойымызда көргіміз келеді</p>
+
+      <form class="rsvp__form" id="rsvpForm" novalidate>
+        <div class="rsvp__field reveal-up" style="--d:0">
+          <input type="text" id="guestName" name="guestName" required placeholder=" ">
+          <label for="guestName">Аты-жөніңіз</label>
+        </div>
+
+        <div class="rsvp__field reveal-up" style="--d:1">
+          <select id="guestCount" name="guestCount" required>
+            <option value="" disabled selected hidden></option>
+            <option value="1">1 адам</option>
+            <option value="2">2 адам</option>
+            <option value="3">3 адам</option>
+            <option value="4">4 адам және көп</option>
+          </select>
+          <label for="guestCount" class="rsvp__label-static">Қанша адам келесіз?</label>
+        </div>
+
+        <div class="rsvp__field reveal-up" style="--d:2">
+          <div class="rsvp__radio-group" role="radiogroup" aria-label="Қатысу">
+            <label class="rsvp__radio">
+              <input type="radio" name="attending" value="yes" checked>
+              <span>Иә, келемін</span>
+            </label>
+            <label class="rsvp__radio">
+              <input type="radio" name="attending" value="no">
+              <span>Өкінішке орай, келе алмаймын</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="rsvp__submit reveal-up" style="--d:3">
+          <span>Жіберу</span>
+        </button>
+      </form>
+
+      <div class="rsvp__success" id="rsvpSuccess" aria-live="polite">
+        <span class="rsvp__success-heart">❤️</span>
+        <p class="rsvp__success-title">Рақмет!</p>
+        <p class="rsvp__success-text">Жауабыңыз қабылданды.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__line"></div>
+    <p class="footer__names">Арманбек <span>❤️</span> Әмина</p>
+    <p class="footer__date">13.09.2026</p>
+  </footer>
+
+  <!-- MUSIC TOGGLE -->
+  <button class="sound-toggle" id="soundToggle" aria-label="Музыканы қосу/өшіру" aria-pressed="true">
+    <svg class="sound-toggle__icon sound-toggle__icon--on" viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+    <svg class="sound-toggle__icon sound-toggle__icon--off" viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+  </button>
+
+</main>
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="audio/music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="js/particles.js"></script>
+<script src="js/envelope.js"></script>
+<script src="js/typewriter.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/scrollReveal.js"></script>
+<script src="js/rsvp.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
