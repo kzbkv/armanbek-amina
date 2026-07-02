@@ -24,11 +24,12 @@
   --gold-light: #D9BD86;
   --gold-deep: #8C6B33;
   --night: #15130F;
-
+  --gold-soft: #d9bd7e;
+  --brown: #3b2a1c;
   /* Typography */
- --font-display: 'Playfair Display', serif;
---font-accent: 'Playfair Display', serif;
---font-body: 'Jost', sans-serif; 
+ --font-display: 'Cormorant Garamond', serif;
+--font-accent: 'Cinzel', serif;
+--font-body: 'Cormorant Garamond', sans-serif; 
 --font-section: 'Cinzel', serif;  /* Spacing scale */
   --space-xs: 0.5rem;
   --space-sm: 1rem;

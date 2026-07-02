@@ -27,10 +27,12 @@
   window.addEventListener('site:revealed', revealHero, { once: true });
 
   /* ---- typewriter for the invitation section ---- */
-  const inviteLines = [
-    'Қадірлі ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, бөлелер, құрбы-құрдас, әпке-жезделер, дос-жарандар, әріптестер!',
-    'Сіздерді үйлену тойымыздың қадірлі қонағы болуға шақырамыз.',
-  ];
+const inviteLines = [
+  'Қадірлі ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, бөлелер, құрбы-құрдас, әпке-жезделер, дос-жарандар, әріптестер!',
+  'Сіздерді балаларымыз',
+  'Арманбек пен Әминаның',
+  'Үйлену тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!'
+];
 
   let typewriterStarted = false;
 
@@ -66,10 +68,7 @@
       const line = inviteLines[lineIndex];
 
       if (charIndex < line.length) {
-        currentLineEl.insertBefore(
-          document.createTextNode(line[charIndex]),
-          cursor
-        );
+        cursor.insertAdjacentHTML('beforebegin', line[charIndex]);
         charIndex++;
         window.setTimeout(typeNextChar, 26 + Math.random() * 22);
       } else {
