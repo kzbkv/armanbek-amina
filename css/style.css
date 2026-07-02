@@ -311,8 +311,8 @@ section {
   line-height: 1.2;
 
   letter-spacing: 0.02em;
-  color: #8c3c3c;  
-  
+  /*color: #8c3c3c;  */
+  color:#a67c3b;
   text-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 .invite__type .line {
@@ -643,7 +643,7 @@ section {
 
 .venue__address {
   position: relative;
-  font-size: 0.95rem;
+  font-size: 2rem;
   color: var(--ink-soft);
   line-height: 1.8;
   margin-bottom: var(--space-sm);
@@ -655,7 +655,7 @@ section {
   align-items: center;
   justify-content: center;
   gap: 0.6em;
-  font-size: 0.8rem;
+  font-size: 1.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--gold-deep);
