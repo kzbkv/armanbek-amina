@@ -703,6 +703,18 @@ section {
 /* ============================================
    RSVP
    ============================================ */
+.rsvp__field--error input,
+.rsvp__field--error select,
+.rsvp__field--error textarea {
+  border-bottom-color: #c0392b;
+}
+
+.rsvp__error {
+  color: #c0392b;
+  font-size: 0.78rem;
+  margin-top: 0.4em;
+  letter-spacing: 0.04em;
+}
 
 .rsvp {
   background: linear-gradient(180deg, var(--cream-deep), var(--cream));
