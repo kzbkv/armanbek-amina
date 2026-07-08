@@ -3,7 +3,6 @@
    ============================================ */
 
 (function () {
-  /* ---- split text into spans for letter-by-letter reveal ---- */
   function prepareLetterReveal() {
     document.querySelectorAll('.reveal-letters[data-text]').forEach((el) => {
       const text = el.getAttribute('data-text');
@@ -21,18 +20,21 @@
   prepareLetterReveal();
 
   function revealHero() {
-    // Hero text is now static — no animated reveal needed
+    // Hero text is now static
   }
 
   window.addEventListener('site:revealed', revealHero, { once: true });
 
-  /* ---- typewriter for the invitation section ---- */
-const inviteLines = [
-  'Қадірлі ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, бөлелер, құрбы-құрдас, әпке-жезделер, дос-жарандар, әріптестер,көршілер, барша жақындарымыз!',
-  'Сіздерді балаларымыз',
-  'Арманбек пен Әминаның',
-  'Үйлену тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!'
-];
+  /* ---- typewriter ---- */
+  const inviteLines = [
+    'Қадірлі ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, бөлелер, құрбы-құрдас, әпке-жезделер, дос-жарандар, әріптестер, көршілер, барша жақындарымыз!',
+    'Сіздерді балаларымыз',
+    'Арманбек пен Әминаның',   // ← line index 2 — special
+    'Үйлену тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!',
+  ];
+
+  // Index of the line to highlight
+  const HIGHLIGHT_LINE = 2;
 
   let typewriterStarted = false;
 
@@ -61,29 +63,61 @@ const inviteLines = [
       if (!currentLineEl) {
         currentLineEl = document.createElement('span');
         currentLineEl.className = 'line';
-        container.appendChild(currentLineEl);
-        currentLineEl.appendChild(cursor);
+
+        // Wrap the special line in a highlight container
+        if (lineIndex === HIGHLIGHT_LINE) {
+          currentLineEl.className = 'line names-line';
+          const inner = document.createElement('span');
+          inner.className = 'names-highlight';
+          currentLineEl.appendChild(inner);
+          container.appendChild(currentLineEl);
+          // cursor lives inside the inner span
+          inner.appendChild(cursor);
+        } else {
+          container.appendChild(currentLineEl);
+          currentLineEl.appendChild(cursor);
+        }
       }
 
       const line = inviteLines[lineIndex];
+      const targetEl = lineIndex === HIGHLIGHT_LINE
+        ? currentLineEl.querySelector('.names-highlight')
+        : currentLineEl;
 
       if (charIndex < line.length) {
         cursor.insertAdjacentHTML('beforebegin', line[charIndex]);
         charIndex++;
-        window.setTimeout(typeNextChar, 26 + Math.random() * 22);
+        // Type the special line slightly faster for drama
+        const speed = lineIndex === HIGHLIGHT_LINE ? 55 : 26 + Math.random() * 22;
+        window.setTimeout(typeNextChar, speed);
       } else {
+        // When the highlight line finishes, trigger the flourish
+        if (lineIndex === HIGHLIGHT_LINE) {
+          triggerNameReveal(currentLineEl);
+        }
         lineIndex++;
         charIndex = 0;
         currentLineEl = null;
-        window.setTimeout(typeNextChar, 380);
+        window.setTimeout(typeNextChar, lineIndex === HIGHLIGHT_LINE + 1 ? 700 : 380);
       }
     }
 
     typeNextChar();
   }
 
+  /* Fire the post-type flourish on the special line */
+  function triggerNameReveal(lineEl) {
+    // Add glow class after a beat
+    window.setTimeout(() => {
+      lineEl.classList.add('names-line--revealed');
+      // Draw the decorative underline
+      const under = lineEl.querySelector('.names-underline');
+      if (under) under.classList.add('names-underline--in');
+    }, 200);
+  }
+
   const inviteSection = document.getElementById('invite');
-  const inviteType = document.getElementById('inviteType');
+  const inviteType    = document.getElementById('inviteType');
 
   if (inviteSection && inviteType && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver(
