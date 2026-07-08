@@ -51,7 +51,20 @@
   --radius-md: 14px;
   --radius-lg: 28px;
 }
-
+@font-face {
+  font-family: 'kz1';
+  src: url('../fonts/kz1.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'kz2';
+  src: url('../fonts/kz2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   background: var(--cream);
   color: var(--ink);

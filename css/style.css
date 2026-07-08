@@ -33,7 +33,7 @@
 
 .section-eyebrow {
   display: inline-block;
-  font-family: var(--font-section);
+ font-family: var(--font-section);
   font-size: clamp(1.3rem, 3vw, 1.8rem);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -282,9 +282,9 @@ section {
   background: linear-gradient(180deg, var(--cream) 0%, var(--cream-deep) 100%);
 }
 
-/*.invite__type {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
+.invite__type {
+ /* font-family: 'Cormorant Garamond', serif;*/
+  /*font-style: italic;*/
   font-size: clamp(1.3rem, 2.8vw, 1.7rem);
   line-height: 2;
   color: var(--ink);
@@ -293,26 +293,27 @@ section {
   margin: var(--space-lg) auto;
   font-weight: 400;
   max-width: 680px;
-}*/
+}
 .invitation__type {
   font-family: var(--font-display);
-  font-size: clamp(22px, 3.4vw, 30px);
+  font-size: clamp(22px, 3.4vw, 60px);
   line-height: 1.6;
   color: var(--brown);
   font-weight: 400;
 }
 .invite__type .line:nth-child(3) {
+  font-size: 5rem !important;
   display: block;
   margin: 0.4rem 0 0.6rem;
- font-style: italic;
-  font-family: 'Cinzel', serif ;
-  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-style: italic;
+  font-family: 'kz1', serif;
+  font-size: clamp(2.2rem, 5vw, 30rem);
   font-weight: 400;
   line-height: 1.2;
 
   letter-spacing: 0.02em;
   /*color: #8c3c3c;  */
-  color:#a67c3b;
+  color: var(--brown);
   text-shadow: 0 2px 10px rgba(0,0,0,0.08);
 }
 .invite__type .line {
