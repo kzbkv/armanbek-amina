@@ -4,7 +4,7 @@
 
 (function () {
   const revealEls = document.querySelectorAll(
-    '.reveal-up, .reveal-zoom, .reveal-fade, .ornament-divider'
+    '.reveal-up, .reveal-zoom, .reveal-fade, .reveal-photo, .ornament-divider'
   );
 
   if ('IntersectionObserver' in window) {

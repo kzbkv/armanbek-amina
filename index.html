@@ -20,9 +20,6 @@
 </head>
 <body>
 
-<!-- PARTICLES -->
-<canvas id="particles-canvas" aria-hidden="true"></canvas>
-
 <!-- GATE / ENVELOPE -->
 <section id="gate" class="gate" aria-label="Шақыруды ашу">
   <div class="gate__bg"></div>
@@ -64,68 +61,115 @@
   <section class="hero" id="hero">
     <div class="hero__media">
       <img
-        src="images/img2.jpg"
+        src="images/img3.jpg"
         alt=""
         class="hero__img"
         id="heroImg"
       >
       <div class="hero__overlay"></div>
-      <div class="hero__fade-bottom"></div>
     </div>
-
-    <div class="hero__torn" aria-hidden="true">
-      <svg viewBox="0 0 1440 55" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0,55 L0,32 C22,40 38,20 58,28 C78,36 92,14 115,22 C138,30 150,8 175,16 C200,24 212,4 238,12 C264,20 275,2 302,10 C329,18 340,0 366,8 C392,16 405,1 430,9 C455,17 468,3 494,11 C520,19 532,5 557,13 C582,21 596,7 622,15 C648,23 660,9 685,17 C710,25 724,11 750,19 C776,27 788,13 812,21 C836,29 850,15 876,23 C902,31 914,17 938,25 C962,33 976,19 1002,27 C1028,35 1040,21 1064,29 C1088,37 1102,23 1128,31 C1154,39 1165,25 1190,33 C1215,41 1228,27 1254,35 C1280,43 1292,29 1316,37 C1340,45 1354,33 1378,41 C1402,49 1420,38 1440,44 L1440,55 Z" fill="#F7F2E9"/>
-      </svg>
-    </div>
-
-    <div class="hero__particles" aria-hidden="true"></div>
 
     <div class="hero__content">
       <p class="hero__eyebrow">ҮЙЛЕНУ ТОЙЫНА ШАҚЫРУ</p>
       <h1 class="hero__names">
-       <span class="gate__name">Арманбек</span>
+       <span class="hero__name gate__name">Арманбек</span>
       <span class="hero__amp">&amp;</span>
-      <span class="gate__name">Әмина</span>
+      <span class="hero__name gate__name">Әмина</span>
       </h1>
+      <p class="hero__meta">13.09.2026</p>
     </div>
   </section>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="ornament-divider" viewBox="0 0 200 40">
-      <path d="M0 20 H70" stroke="currentColor" stroke-width="1"/>
-      <path d="M200 20 H130" stroke="currentColor" stroke-width="1"/>
-      <path d="M100 6 C 90 14, 90 26, 100 34 C 110 26, 110 14, 100 6 Z" fill="none" stroke="currentColor" stroke-width="1.1"/>
-      <circle cx="100" cy="20" r="2.6" fill="currentColor"/>
-      <path d="M80 20 C 86 14, 86 26, 80 20" fill="none" stroke="currentColor" stroke-width="0.9"/>
-      <path d="M120 20 C 114 14, 114 26, 120 20" fill="none" stroke="currentColor" stroke-width="0.9"/>
-    </symbol>
-  </defs>
-</svg>
   <!-- 1. INVITATION TEXT -->
   <section class="invite" id="invite">
-      <div class="ornament-divider reveal" aria-hidden="true">
-        <svg viewBox="0 0 200 40" class="ornament-svg ornament-svg--sm"><use href="#ornament-divider"></use></svg>
-      </div>
+    <div class="floral-accent floral-accent--md" style="top:12px; left:6%; --r:-10deg;">
+      <img src="https://images.unsplash.com/photo-1720882713246-0fc55cf98966?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
+    <div class="floral-accent floral-accent--sm" style="top:12px; right:6%; --r:14deg;">
+      <img src="https://images.unsplash.com/photo-1720882713161-9673f3ad1cc9?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
+    <div class="floral-accent floral-accent--lg" style="bottom:10px; right:5%; --r:8deg;">
+      <img src="https://images.unsplash.com/photo-1720882713246-0fc55cf98966?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
+    <div class="floral-accent floral-accent--xs" style="bottom:10px; left:5%; --r:-16deg;">
+      <img src="https://images.unsplash.com/photo-1720882713161-9673f3ad1cc9?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
     <div class="invite__inner">
       <span class="section-eyebrow reveal-up">Шақыру</span>
-<div class="invite__type" id="inviteType">
-  <span class="line invite-line-1">Қадірлі ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, бөлелер, құрбы-құрдас, әпке-жезделер, дос-жарандар, әріптестер, көршілер, барша жақындарымыз!</span>
-  <span class="line invite-line-2">Сіздерді балаларымыз</span>
-  <span class="line names-line"><span class="names-highlight">Арманбек пен Әминаның</span></span>
-  <span class="line invite-line-4">Үйлену тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!</span>
-</div>      <div class="invite__rule"></div>
+      <div class="invite__type" id="inviteType">
+        <span class="line invite-line-1">Қадірлі ағайын-туыс, бауырлар, құда-жекжат, нағашы-жиен, бөлелер, құрбы-құрдас, әпке-жезделер, дос-жарандар, әріптестер, көршілер, барша жақындарымыз!</span>
+        <span class="line invite-line-2">Сіздерді балаларымыз</span>
+        <span class="line names-line"><span class="names-highlight">Арманбек пен Әминаның</span></span>
+        <span class="line invite-line-4">Үйлену тойына арналған ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!</span>
+      </div>
+      <div class="invite__rule"></div>
       <p class="invite__owners reveal-zoom">
         Той иелері:<br>
         <span>ЖАНДАРБЕК &amp; МУНИРА</span>
       </p>
-      <div class="invite__rule is-revealed"></div>
     </div>
   </section>
 
-  <!-- 2. WEDDING DATE CALENDAR -->
+  <!-- FULL-BLEED PHOTO -->
+  <div class="photo-block reveal-photo">
+    <img src="images/img4.jpg" alt="">
+  </div>
+
+  <!-- 2. VENUE / ADDRESS -->
+  <section class="venue" id="venue">
+    <div class="floral-accent floral-accent--sm" style="top:12px; left:5%; --r:-12deg;">
+      <img src="https://images.unsplash.com/photo-1720882713246-0fc55cf98966?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
+    <div class="floral-accent floral-accent--md" style="bottom:10px; right:5%; --r:16deg;">
+      <img src="https://images.unsplash.com/photo-1720882713161-9673f3ad1cc9?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
+    <div class="venue__inner">
+      <span class="section-eyebrow reveal-up">Той орны</span>
+
+      <div class="venue__card reveal-up">
+        <h3 class="venue__name">Мейрамхана «Сұлтан сарайы»</h3>
+        <p class="venue__address">
+          Алматы қаласы<br>
+          Сейітов көшесі, 12
+        </p>
+
+        <div class="venue__date-big">13 | 09 | 2026</div>
+        <div class="venue__time-row">
+          <span>Басталу уақыты</span>
+          <span>•</span>
+          <span>17:00</span>
+        </div>
+
+        <div class="venue__map">
+          <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
+          <script charset="utf-8">
+            new DGWidgetLoader({
+              "width": "100%",
+              "height": 320,
+              "borderColor": "#D8CBB0",
+              "pos": {"lat": 43.20578579925745, "lon": 76.81743621826173, "zoom": 16},
+              "opt": {"city": "almaty"},
+              "org": [{"id": "70000001023455019"}]
+            });
+          </script>
+        </div>
+
+        <a class="venue__btn" href="http://2gis.kz/almaty/firm/70000001023455019/center/76.81743621826173,43.20578579925745/zoom/16" target="_blank" rel="noopener">
+          <span>Ашу 2GIS</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. WEDDING DATE CALENDAR -->
   <section class="moments" id="moments">
+    <div class="floral-accent floral-accent--sm" style="top:12px; right:6%; --r:-8deg;">
+      <img src="https://images.unsplash.com/photo-1720882713246-0fc55cf98966?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
+    <div class="floral-accent floral-accent--xs" style="bottom:10px; left:6%; --r:12deg;">
+      <img src="https://images.unsplash.com/photo-1720882713161-9673f3ad1cc9?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
     <div class="moments__inner">
       <span class="section-eyebrow reveal-up">Той күні</span>
       <h2 class="moments__title reveal-up">13 қыркүйек, жексенбі</h2>
@@ -144,49 +188,14 @@
     </div>
   </section>
 
-  <!-- 3. VENUE -->
-  <section class="venue" id="venue">
-    <div class="venue__inner">
-      <span class="section-eyebrow reveal-up">Той орны</span>
-      <h2 class="venue__title reveal-up">Сізді тосамыз</h2>
-
-      <div class="venue__card reveal-up">
-        <div class="venue__card-glow"></div>
-        <h3 class="venue__name">Мейрамхана «Сұлтан сарайы»</h3>
-        <p class="venue__address">
-          Алматы қаласы<br>
-          Сейітов көшесі, 12
-        </p>
-        <div class="venue__time-row">
-          <span>13 қыркүйек 2026</span>
-          <span class="venue__dot">•</span>
-          <span>17:00</span>
-        </div>
-
-        <div class="venue__map">
-          <script charset="utf-8" src="https://widgets.2gis.com/js/DGWidgetLoader.js"></script>
-          <script charset="utf-8">
-            new DGWidgetLoader({
-              "width": "100%",
-              "height": 340,
-              "borderColor": "#D9BD86",
-              "pos": {"lat": 43.20578579925745, "lon": 76.81743621826173, "zoom": 16},
-              "opt": {"city": "almaty"},
-              "org": [{"id": "70000001023455019"}]
-            });
-          </script>
-        </div>
-
-        <a class="venue__btn" href="http://2gis.kz/almaty/firm/70000001023455019/center/76.81743621826173,43.20578579925745/zoom/16" target="_blank" rel="noopener">
-          <span>Ашу 2GIS</span>
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- 4. COUNTDOWN -->
   <section class="countdown" id="countdown">
+    <div class="floral-accent floral-accent--md" style="top:12px; left:5%; --r:10deg;">
+      <img src="https://images.unsplash.com/photo-1720882713246-0fc55cf98966?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
+    <div class="floral-accent floral-accent--sm" style="bottom:10px; right:5%; --r:-14deg;">
+      <img src="https://images.unsplash.com/photo-1720882713161-9673f3ad1cc9?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
     <div class="countdown__inner">
       <span class="section-eyebrow reveal-up">Тойға дейін</span>
       <h2 class="countdown__title reveal-up">Әр сәт жақындатады</h2>
@@ -214,9 +223,15 @@
 
   <!-- 5. САУАЛНАМА (RSVP) -->
   <section class="rsvp" id="rsvp">
+    <div class="floral-accent floral-accent--sm" style="top:12px; left:5%; --r:-10deg;">
+      <img src="https://images.unsplash.com/photo-1720882713246-0fc55cf98966?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
+    <div class="floral-accent floral-accent--md" style="bottom:10px; right:5%; --r:14deg;">
+      <img src="https://images.unsplash.com/photo-1720882713161-9673f3ad1cc9?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
     <div class="rsvp__inner">
       <span class="section-eyebrow reveal-up">Қатысуыңызды растаңыз</span>
-      <h2 class="rsvp__title reveal-up">САУАЛНАМА</h2>
+      <h2 class="rsvp__title reveal-up">Сауалнама</h2>
       <p class="rsvp__subtitle reveal-up">Біз сізді тойымызда көргіміз келеді</p>
 
       <form class="rsvp__form" id="rsvpForm" novalidate>
@@ -264,6 +279,12 @@
 
   <!-- FOOTER -->
   <footer class="footer">
+    <div class="floral-accent floral-accent--xs" style="top:20px; left:12%; --r:-14deg;">
+      <img src="https://images.unsplash.com/photo-1720882713246-0fc55cf98966?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
+    <div class="floral-accent floral-accent--xs" style="top:20px; right:12%; --r:14deg;">
+      <img src="https://images.unsplash.com/photo-1720882713161-9673f3ad1cc9?w=320&q=80&auto=format&fit=max" alt="">
+    </div>
     <div class="footer__line"></div>
     <p class="footer__names">Арманбек <span>❤️</span> Әмина</p>
     <p class="footer__date">13.09.2026</p>
@@ -271,8 +292,8 @@
 
   <!-- MUSIC TOGGLE -->
   <button class="sound-toggle" id="soundToggle" aria-label="Музыканы қосу/өшіру" aria-pressed="true">
-    <svg class="sound-toggle__icon sound-toggle__icon--on" viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-    <svg class="sound-toggle__icon sound-toggle__icon--off" viewBox="0 0 24 24" width="22" height="22" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+    <svg class="sound-toggle__icon sound-toggle__icon--on" viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M16.5 8.5a5 5 0 010 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+    <svg class="sound-toggle__icon sound-toggle__icon--off" viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M4 9v6h4l5 5V4L8 9H4z" fill="currentColor"/><path d="M16 9l5 6M21 9l-5 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
   </button>
 
 </main>
@@ -281,7 +302,6 @@
   <source src="audio/music.mp3" type="audio/mpeg">
 </audio>
 
-<script src="js/particles.js"></script>
 <script src="js/envelope.js"></script>
 <script src="js/typewriter.js"></script>
 <script src="js/countdown.js"></script>
@@ -289,7 +309,6 @@
 <script src="js/scrollReveal.js"></script>
 <script src="js/rsvp.js"></script>
 <script src="js/main.js"></script>
-<script src="js/sparkles.js"></script>
 <script src="js/petals.js"></script>
 </body>
 </html>

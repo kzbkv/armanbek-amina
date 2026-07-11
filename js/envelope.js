@@ -34,6 +34,11 @@
       site.removeAttribute('aria-hidden');
       document.body.style.overflow = '';
 
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        window.setTimeout(() => hero.classList.add('hero--revealed'), 250);
+      }
+
       // remove gate from layout after transition completes
       window.setTimeout(() => {
         gate.style.display = 'none';
