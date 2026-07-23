@@ -6,18 +6,18 @@
 (function () {
   const canvas = document.createElement('canvas');
   canvas.style.cssText = [
-    'position:absolute',
-    'top:0',
-    'left:0',
+    'position:fixed',
+    'inset:0',
     'z-index:3',
     'pointer-events:none',
     'width:100%',
+    'height:100%',
   ].join(';');
   document.body.appendChild(canvas);
 
   const ctx = canvas.getContext('2d');
   let W, H, petals = [], rafId = null;
-  const COUNT = window.innerWidth < 640 ? 24 : 42;
+  const COUNT = window.innerWidth < 640 ? 12 : 22;
 
   /* muted cream / gold / ivory tones — matches the minimalist palette */
   const COLORS = [
@@ -28,18 +28,9 @@
     [247, 242, 233],
   ];
 
-  function docHeight() {
-    return Math.max(
-      document.body.scrollHeight,
-      document.documentElement.scrollHeight,
-      document.body.offsetHeight,
-      document.documentElement.offsetHeight
-    );
-  }
-
   function resize() {
     W = canvas.width = window.innerWidth;
-    H = canvas.height = docHeight();
+    H = canvas.height = window.innerHeight;
   }
 
   function makePetal(fromTop) {
@@ -47,8 +38,8 @@
     return {
       x: Math.random() * W,
       y: fromTop ? -20 : Math.random() * H,
-      w: Math.random() * 7 + 9,
-      h: Math.random() * 9 + 15,
+      w: Math.random() * 10 + 6,
+      h: Math.random() * 6 + 4,
       rot: Math.random() * Math.PI * 2,
       rotSpeed: (Math.random() - 0.5) * 0.03,
       vy: Math.random() * 0.5 + 0.25,
@@ -64,37 +55,14 @@
     ctx.save();
     ctx.translate(p.x, p.y);
     ctx.rotate(p.rot);
-
-    const w = p.w, h = p.h;
-
     ctx.beginPath();
-    ctx.moveTo(0, h / 2);
-    ctx.bezierCurveTo(-w / 2, h * 0.18, -w / 2, -h * 0.32, 0, -h / 2);
-    ctx.bezierCurveTo(w / 2, -h * 0.32, w / 2, h * 0.18, 0, h / 2);
-    ctx.closePath();
-
+    ctx.ellipse(0, 0, p.w / 2, p.h / 2, 0, 0, Math.PI * 2);
     ctx.fillStyle = `rgba(${p.r},${p.g},${p.b},${p.alpha})`;
     ctx.fill();
-
-    /* faint center vein for a bit of realism */
-    ctx.strokeStyle = `rgba(${p.r},${p.g},${p.b},${p.alpha * 0.6})`;
-    ctx.lineWidth = Math.max(0.4, w * 0.03);
-    ctx.beginPath();
-    ctx.moveTo(0, h * 0.4);
-    ctx.lineTo(0, -h * 0.4);
-    ctx.stroke();
-
     ctx.restore();
   }
 
-  let lastHeightCheck = 0;
-
   function tick(t) {
-    if (t - lastHeightCheck > 500) {
-      lastHeightCheck = t;
-      const h = docHeight();
-      if (h !== H) { H = canvas.height = h; }
-    }
     ctx.clearRect(0, 0, W, H);
     for (const p of petals) {
       p.rot += p.rotSpeed;

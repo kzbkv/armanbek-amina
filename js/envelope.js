@@ -21,7 +21,7 @@
 
     // Try to start music on the gesture (browsers require user interaction)
     if (music) {
-      music.volume = 0.275;
+      music.volume = 0.08;
       music.play().catch(() => {
         /* autoplay blocked — sound toggle remains available */
       });

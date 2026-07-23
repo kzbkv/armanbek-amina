@@ -8,6 +8,8 @@
 
   if (!toggle || !music) return;
 
+  music.volume = 0.08;
+
   toggle.addEventListener('click', () => {
     if (music.muted) {
       music.muted = false;
